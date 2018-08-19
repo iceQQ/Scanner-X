@@ -13,6 +13,7 @@ from colors import *
 
 
 def PortScanner():
+    print ga.blue
     os.system("clear")
     os.system("figlet Port Scanner")
     server = raw_input("Server To Scan: ")
@@ -46,6 +47,7 @@ def PortScanner():
 ##################
 
 def findAdmin():
+	print ga.yellow
         os.system("clear")
         os.system("figlet Admin Panel Finder")
 	f = open("link.txt","r");
@@ -69,6 +71,7 @@ def findAdmin():
 ##################################################
 
 def DDoS():
+    print ga.red
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     bytes = random._urandom(2048)
     ############################
@@ -114,6 +117,7 @@ def DDoS():
 
 #################
 def Update():
+    print ga.rose
     os.system("clear")
     os.system("figlet Update")
     os.system("apt-get update && apt-get upgrade && apt-get dist-upgrade -y")
@@ -121,6 +125,7 @@ def Update():
     os.system("figlet Updated")
 
 def termux():
+    print ga.grey
     os.system("clear")
     os.system("figlet UPDATE")
     os.system("apt update && apt upgrade")
@@ -129,6 +134,7 @@ def termux():
     os.system("ls")
 
 def webSiteInfo():
+	print ga.lightblue
         os.system("clear")
         server = raw_input("WebSite: ")
         ip = socket.gethostbyname(server)
@@ -142,17 +148,14 @@ print ga.red
 os.system("clear")
 print "#####################################"
 print "#   ++++++ IceBot-Tool v1  ++++++   #"
-print ga.lightblue
 print "#        |==================|       #"
 print "#    +   |MACEDONIA IS GREEK|  +    #"
 print "#        |==================|       #"
-print ga.red
 print "#    +    Scripts by icebot    +    #"
 print "#   +++    WHITE-HAT-HACKER   +++   #"
 print "#####################################"
-print "\n"
+os.system("figlet iceBot-Tool")
 print ga.green
-os.system("figlet IceBot-Tool")
 print "[1]  Port Scanner"
 print "[2]  Admin Panel Finder"
 print "[3]  DDoS Tool"
