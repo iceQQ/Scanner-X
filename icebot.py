@@ -161,7 +161,7 @@ print "[2]  Admin Panel Finder"
 print "[3]  DDoS Tool"
 print "[4]  Linux Update"
 print "[5]  Termux Update"
-print "[6]  Find a WebSite's IP"
+print "[6]  Find Website Info"
 print "\n" 
 
 tool = input("---->")
