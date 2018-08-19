@@ -12,10 +12,10 @@ require python2
 working on termux,linux,windows
 
 linux-termux usage::
-cd icebot
+cd iceBot
 sudo chmod +x icebot.py
 python2 icebot.py
 
 windows usage::
-cd icebot
+cd iceBot
 icebot.py
