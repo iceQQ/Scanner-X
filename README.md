@@ -5,6 +5,7 @@ scan a website for open ports,
 make a dos attack to a website,
 update system,
 website info using whois
+added network scan--hosts,os detection,open ports
 
 ==============================
 
