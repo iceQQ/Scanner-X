@@ -1,9 +1,9 @@
 # iceBot
 its a multi-tool
-to find admin panel of a website
-scan a website for open ports
-make a dos attack to a website
-update system
+to find admin panel of a website,
+scan a website for open ports,
+make a dos attack to a website,
+update system,
 website info using whois
 
 ==============================
