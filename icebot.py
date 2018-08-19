@@ -147,7 +147,7 @@ def webSiteInfo():
 print ga.red
 os.system("clear")
 print "#####################################"
-print "#   ++++++ IceBot-Tool v1  ++++++   #"
+print "#    ++++++ IceBot-Tool v1 ++++++   #"
 print "#        |==================|       #"
 print "#    +   |MACEDONIA IS GREEK|  +    #"
 print "#        |==================|       #"
