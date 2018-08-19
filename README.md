@@ -11,10 +11,11 @@ website info using whois
 require python2
 working on termux,linux,windows
 
+MUST RUN AS ROOT::
 linux-termux usage::
 cd iceBot
 sudo chmod +x icebot.py
-python2 icebot.py
+sudo python2 icebot.py
 
 windows usage::
 cd iceBot
