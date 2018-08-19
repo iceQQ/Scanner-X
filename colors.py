@@ -6,4 +6,5 @@ class colors:
                 self.yellow = "\033[93m"
                 self.red = "\033[91m"
                 self.rose = "\033[95m"
+                self.lightblue = "\033[96m"
 ga = colors()
