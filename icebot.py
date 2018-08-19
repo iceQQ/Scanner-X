@@ -143,6 +143,38 @@ def webSiteInfo():
         process = os.popen(command)
         info = str(process.read())
         print info
+
+def networkScanner():
+    print ga.yellow
+    os.system("clear")
+    os.system("figlet Net-Scanner")
+    print "[1]  Simple Network Scan"
+    print "[2]  Port Scan And OS Detection"
+    arg = input("-----> ")
+    if arg == 1:
+        os.system("clear")
+        print "Example: 192.168.1.0/27  (Scans First 32 Hosts)"
+        print "\n"
+        ip = raw_input("NetWork IP: ")
+        os.system("clear")
+        os.system("figlet Scanning...")
+        command = "nmap -sL "+ ip
+        process = os.popen(command)
+        info = str(process.read())
+        print info
+    elif arg == 2:
+        os.system("clear")
+        print "Example: 192.168.1.0/27  (Scans First 32 Hosts)"
+        print "\n"
+        ip = raw_input("NetWork IP: ")
+        os.system("clear")
+        os.system("figlet Scanning...")
+        command = "nmap -sS -O --osscan-guess "+ ip
+        process = os.popen(command)
+        info = str(process.read())
+        print info
+
+
 #################
 print ga.red
 os.system("clear")
@@ -162,9 +194,10 @@ print "[3]  DDoS Tool"
 print "[4]  Linux Update"
 print "[5]  Termux Update"
 print "[6]  Find Website Info"
+print "[7]  NetWork Scan"
 print "\n" 
 
-tool = input("---->")
+tool = input("----> ")
 
 if tool == 1:
     PortScanner()
@@ -183,3 +216,6 @@ elif tool == 5:
 
 elif tool == 6:
     webSiteInfo()
+
+elif tool == 7:
+    networkScanner()
