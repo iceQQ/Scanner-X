@@ -182,4 +182,4 @@ elif tool == 5:
     termux()    
 
 elif tool == 6:
-    ip()
+    webSiteInfo()
