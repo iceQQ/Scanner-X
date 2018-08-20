@@ -30,7 +30,7 @@ def PortScanner():
     try:
         for i in range(1,1025):
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(0.5)
+            sock.settimeout(0.1)
             result = sock.connect_ex((serverip,i))
             if result == 0:
                 c = c + 1
