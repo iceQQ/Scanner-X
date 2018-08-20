@@ -248,7 +248,7 @@ if soft == 1:
     print "#   +++    WHITE-HAT-HACKER   +++   #"
     print "#####################################"
     os.system("figlet iceBot-Tool")
-    os.system("color 1")
+    print ga.green
     print "[1]  WebSite Port Scanner"
     print "[2]  Admin Panel Finder"
     print "[3]  DDoS Tool"
