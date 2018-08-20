@@ -230,14 +230,7 @@ soft = input("Software: ")
 if soft == 1:
     print ga.red
     os.system("clear")
-    print "#####################################"
-    print "#     ++++++ Scanner-X v2  ++++++   #"
-    print "#        |==================|       #"
-    print "#    +   |MACEDONIA IS GREEK|  +    #"
-    print "#        |==================|       #"
-    print "#    +    Scripts by icebot    +    #"
-    print "#   +++    WHITE-HAT-HACKER   +++   #"
-    print "#####################################"
+    print banner()
     os.system("figlet iceBot-Tool")
     print ga.green
     print "[1]  WebSite Port Scanner"
@@ -275,14 +268,7 @@ if soft == 1:
 elif soft == 2:
     os.system("cls")
     os.system("color 4")
-    print "#####################################"
-    print "#     ++++++ Scanner-X v2  ++++++   #"
-    print "#        |==================|       #"
-    print "#    +   |MACEDONIA IS GREEK|  +    #"
-    print "#        |==================|       #"
-    print "#    +    Scripts by icebot    +    #"
-    print "#   +++    WHITE-HAT-HACKER   +++   #"
-    print "#####################################"
+    print banner()
     print ga.blue
     print "[1]  Port Scanner"
     print "[2]  Admin Panel Finder"
