@@ -8,16 +8,22 @@ website info using whois
 added network scan--hosts,os detection,open ports
 
 ==============================
-
-require python2
-working on termux,linux,windows
-
-MUST RUN AS ROOT::
-linux-termux usage::
+# usage
+LINUX:
 cd iceBot
 sudo chmod +x icebot.py
 sudo python2 icebot.py
-
-windows usage::
+==============================
+TERMUX:
+apt-get install nmap
+pkg install python2
 cd iceBot
-icebot.py
+chmod +x icebot.py
+python2 icebot.py
+=============================
+WINDOWS:
+first you are going to need python2.7
+download zip
+extract the zip file
+open command prompt and find the folder using cd
+then just type icebot.py
