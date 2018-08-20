@@ -231,7 +231,7 @@ if soft == 1:
     print ga.red
     os.system("clear")
     print "#####################################"
-    print "#    ++++++ IceBot-Tool v1 ++++++   #"
+    print "#     ++++++ Scanner-X v2  ++++++   #"
     print "#        |==================|       #"
     print "#    +   |MACEDONIA IS GREEK|  +    #"
     print "#        |==================|       #"
@@ -276,7 +276,7 @@ elif soft == 2:
     os.system("cls")
     os.system("color 4")
     print "#####################################"
-    print "#    ++++++ IceBot-Tool v1 ++++++   #"
+    print "#     ++++++ Scanner-X v2  ++++++   #"
     print "#        |==================|       #"
     print "#    +   |MACEDONIA IS GREEK|  +    #"
     print "#        |==================|       #"
