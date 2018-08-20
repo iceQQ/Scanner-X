@@ -34,7 +34,7 @@ def PortScanner():
             result = sock.connect_ex((serverip,i))
             if result == 0:
                 c = c + 1
-                print "Port: ",port,"/TCP", "  OPEN
+                print "Port: ",port,"/TCP", "  OPEN"
             sock.close() 
 ############################################
         print c, ":" "Opened Ports"
