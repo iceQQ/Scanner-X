@@ -9,3 +9,13 @@ class colors:
                 self.lightblue = "\033[96m"
                 self.grey = "\033[90m"
 ga = colors()
+
+def banner():
+    print "#####################################"
+    print "#    ++++++  Scanner-X v2  ++++++   #"
+    print "#        |==================|       #"
+    print "#    +   |MACEDONIA IS GREEK|  +    #"
+    print "#        |==================|       #"
+    print "#    +    Scripts by icebot    +    #"
+    print "#   +++    WHITE-HAT-HACKER   +++   #"
+    print "#####################################"
