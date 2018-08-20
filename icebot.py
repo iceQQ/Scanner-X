@@ -232,9 +232,8 @@ def networkScanner():
 
 #################
 
-print "[1] for linux"
-print "[2] for windows"
-print "[3] for termux"
+print "[1] For Linux-Termux"
+print "[2] For Windows"
 print "\n"
 soft = input("Software: ")
 if soft == 1:
