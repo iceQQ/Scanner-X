@@ -169,7 +169,7 @@ def networkScanner():
         ip = raw_input("NetWork IP: ")
         os.system("clear")
         os.system("figlet Scanning...")
-        command = "nmap -sS -O --osscan-guess "+ ip
+        command = "nmap -sS -O  "+ ip
         process = os.popen(command)
         info = str(process.read())
         print info
