@@ -15,7 +15,7 @@ sudo chmod +x icebot.py
 sudo python2 icebot.py
 
 
-TERMUX:
+TERMUX:  THE NETWORK-SCANNER IS NOT WORKING IN TERMUX
 apt-get install nmap
 pkg install python2
 cd iceBot
