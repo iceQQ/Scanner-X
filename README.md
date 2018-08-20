@@ -7,14 +7,14 @@ update system,
 website info using whois
 added network scan--hosts,os detection,open ports
 
-==============================
+
 # usage
 LINUX:
 cd iceBot
 sudo chmod +x icebot.py
 sudo python2 icebot.py
 
-==============================
+
 TERMUX:
 apt-get install nmap
 pkg install python2
@@ -22,7 +22,7 @@ cd iceBot
 chmod +x icebot.py
 python2 icebot.py
 
-=============================
+
 WINDOWS:
 first you are going to need python2.7
 download zip
