@@ -32,7 +32,6 @@ def PortScannerWIN():
     print "----------------------------------+"
     print "Scanning Host: ",  serverip, "   +"
     print "----------------------------------+"
-############################################
     c=0
     try:
         for port in range(1,1025):
@@ -43,9 +42,7 @@ def PortScannerWIN():
                 c = c + 1
                 print "Port: ",port,"/TCP", "  OPEN"
             sock.close() 
-############################################
         print c, ":" "Opened Ports"
-############################################
     except KeyboardInterrupt:
         print "\n"
         print "you pressed Ctrl+C"
@@ -95,15 +92,13 @@ def findAdminWIN():
 			continue
 		else:
 			print "OK => ",req_link
-##################################################
+			
 ##################################################
 
 def DDoS():
     print ga.red
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     bytes = random._urandom(2048)
-    ############################
-    #############################
     os.system("clear")
     os.system("figlet IceBot-DDOS")
     time.sleep(2)
@@ -111,13 +106,10 @@ def DDoS():
     os.system("figlet DDOS-IceBot")
     time.sleep(2)
     os.system("clear")
-    ##############################
     os.system("figlet Keep Hacking")
-    ##############################
     print
     ip = raw_input("Target IP : ")
     port = input("Target Port : ")
-    ##############################
     os.system("clear")
     for i in range(2):
 	    os.system("figlet Good Luck")
@@ -132,7 +124,6 @@ def DDoS():
 	    os.system("figlet Good Luck...")
 	    time.sleep(1)
 	    os.system("clear")
-      ################################
     sent = 0
     try:
         while True:
@@ -240,7 +231,7 @@ if soft == 1:
     print ga.red
     os.system("clear")
     print "#####################################"
-    print "#    ++++++ IceBot-Tool v2 ++++++   #"
+    print "#    ++++++ IceBot-Tool v1 ++++++   #"
     print "#        |==================|       #"
     print "#    +   |MACEDONIA IS GREEK|  +    #"
     print "#        |==================|       #"
@@ -270,29 +261,29 @@ if soft == 1:
         DDoS()
    
     elif tool == 4:
-        networkScanner()
+        Update()
     
     elif tool == 5:
-        webSiteInfo()    
+        termux()    
 
     elif tool == 6:
-        termux()
+        webSiteInfo()
 
     elif tool == 7:
-        Update()
+        networkScanner()
 
 elif soft == 2:
     os.system("cls")
     os.system("color 4")
     print "#####################################"
-    print "#    ++++++ IceBot-Tool v2 ++++++   #"
+    print "#    ++++++ IceBot-Tool v1 ++++++   #"
     print "#        |==================|       #"
     print "#    +   |MACEDONIA IS GREEK|  +    #"
     print "#        |==================|       #"
     print "#    +    Scripts by icebot    +    #"
     print "#   +++    WHITE-HAT-HACKER   +++   #"
     print "#####################################"
-    os.system("color 2")
+    print ga.blue
     print "[1]  Port Scanner"
     print "[2]  Admin Panel Finder"
     print "[3]  DDoS Tool"
