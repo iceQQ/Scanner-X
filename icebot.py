@@ -270,16 +270,16 @@ if soft == 1:
         DDoS()
    
     elif tool == 4:
-        Update()
+        networkScanner()
     
     elif tool == 5:
-        termux()    
+        webSiteInfo()    
 
     elif tool == 6:
-        webSiteInfo()
+        termux()
 
     elif tool == 7:
-        networkScanner()
+        Update()
 
 elif soft == 2:
     os.system("cls")
