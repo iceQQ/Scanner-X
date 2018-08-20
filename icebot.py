@@ -31,7 +31,7 @@ def PortScanner():
         for port in range(1,1025):
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.settimeout(0.1)
-            result = sock.connect_ex((serverip,i))
+            result = sock.connect_ex((serverip,port))
             if result == 0:
                 c = c + 1
                 print "Port: ",port,"/TCP", "  OPEN"
