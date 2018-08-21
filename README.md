@@ -7,7 +7,8 @@ update system,
 website info using whois
 added network scan--hosts,os detection,open ports
 
-
+Require python2 
+apt-get install python2
 # usage
 LINUX:
 cd Scanner-X-Master
