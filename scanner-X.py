@@ -231,7 +231,7 @@ if soft == 1:
     print ga.red
     os.system("clear")
     print banner()
-    os.system("figlet iceBot-Tool")
+    os.system("figlet Scanner-X")
     print ga.green
     print "[1]  WebSite Port Scanner"
     print "[2]  Admin Panel Finder"
