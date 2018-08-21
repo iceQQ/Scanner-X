@@ -6,6 +6,7 @@ make a dos attack to a website,
 update system,
 website info using whois
 added network scan--hosts,os detection,open ports
+added IPGeoLocator
 
 Require python2 
 apt-get install python2
