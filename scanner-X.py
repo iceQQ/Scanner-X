@@ -4,6 +4,8 @@ import sys
 import os
 import socket
 import time
+import json
+import urllib2
 from urllib2 import Request, urlopen, URLError, HTTPError
 from colors import *
 
@@ -94,7 +96,30 @@ def findAdminWIN():
 			print "OK => ",req_link
 			
 ##################################################
-
+def iplocate():
+    print ga.red
+    while True:
+	ip1=raw_input("IP Address: ")
+	url = "http://ip-api.com/json/"
+	response = urllib2.urlopen(url + ip1)
+	data = response.read()
+	values = json.loads(data)
+	os.system("clear")
+	print "\n"
+	print(" IP: " + values['query'])
+	print(" Status: " + values['status'])
+	print(" Region: " + values['regionName'])
+	print(" Country: " + values['country'])
+	print(" City: " + values['city'])
+	print(" ISP: " + values['isp'])
+	print(" Lat,Lon: " + str(values['lat']) + "," + str(values['lon']))
+	print(" ZIPCODE: " + values['zip'])
+	print(" TimeZone: " + values['timezone'])
+	print(" AS: " + values['as'])
+	print "\n"
+	print ga.yellow
+	print "Thanks For Using My Tool :D"
+              
 def DDoS():
     print ga.red
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -235,11 +260,12 @@ if soft == 1:
     print ga.green
     print "[1]  WebSite Port Scanner"
     print "[2]  Admin Panel Finder"
-    print "[3]  DDoS Tool"
-    print "[4]  NetWork Scan"
-    print "[5]  Find WebSite Info"
-    print "[6]  Termux update"
+    print "[3]  IP-GeoLocate"
+    print "[4]  DOS Tool"
+    print "[5]  Network-Scanner"
+    print "[6]  Find WebSite Info"
     print "[7]  Linux Update"
+    print "[8]  Termux Update"
     print "\n" 
 
     tool = input("----> ")
@@ -249,21 +275,24 @@ if soft == 1:
 
     elif tool == 2:
         findAdmin()
+    
+    elif too == 3:
+	iplocate()
 
-    elif tool == 3:
+    elif tool == 4:
         DDoS()
    
-    elif tool == 4:
-        Update()
-    
     elif tool == 5:
-        termux()    
-
+        networkScanner()
+    
     elif tool == 6:
-        webSiteInfo()
+        webSiteInfo()    
 
     elif tool == 7:
-        networkScanner()
+        Update()
+
+    elif tool == 8:
+        termux()
 
 elif soft == 2:
     os.system("cls")
