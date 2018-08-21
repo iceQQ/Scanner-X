@@ -276,7 +276,7 @@ if soft == 1:
     elif tool == 2:
         findAdmin()
     
-    elif too == 3:
+    elif tool == 3:
 	iplocate()
 
     elif tool == 4:
