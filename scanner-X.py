@@ -119,6 +119,7 @@ def iplocate():
 	print "\n"
 	print ga.yellow
 	print "Thanks For Using My Tool :D"
+	exit()
               
 def DDoS():
     print ga.red
