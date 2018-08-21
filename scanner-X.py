@@ -248,7 +248,8 @@ def networkScanner():
 
 
 #################
-
+os.system("cls")
+os.system("clear")
 print "[1] For Linux-Termux"
 print "[2] For Windows"
 print "\n"
