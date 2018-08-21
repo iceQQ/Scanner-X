@@ -250,6 +250,7 @@ def networkScanner():
 #################
 os.system("cls")
 os.system("clear")
+os.system("figlet Scanner-X")
 print "[1] For Linux-Termux"
 print "[2] For Windows"
 print "\n"
