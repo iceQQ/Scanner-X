@@ -343,7 +343,7 @@ if soft == 1:
 	termux()
 
 elif soft == 2:
-        print ga.red
+    print ga.red
     os.system("clear")
     print banner()
     os.system("figlet Scanner-X")
