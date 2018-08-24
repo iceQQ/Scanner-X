@@ -291,20 +291,18 @@ if soft == 1:
     print banner()
     os.system("figlet Scanner-X")
     print ga.green
-    print "[1]  WebSite Port Scanner"
-    print "[2]  Admin Panel Finder"
-    print "[3]  IP-GeoLocate"
-    print "[4]  DOS Tool"
-    print "[5]  Network-Scanner"
-    print "[6]  Deauth Access Point"
-    print "[7]  Find WebSite Info"
-    print "[8]  Linux Update"
-    print "[9]  Termux Update"
+    print "[1] WebSite Port Scanner   [6] Deauth Access Point"
+    print "[2] Admin Panel Finder     [7] Find WebSite Info"
+    print "[3] IP-GeoLocate           [8] Linux Update"
+    print "[4] DOS Tool               [9] Termux Update"
+    print "[5] Network-Scanner        [0] Exit"
     print "\n" 
 
     tool = input("----> ")
 
-    if tool == 1:
+    if tool == 0:
+	exit()
+    elif tool == 1:
         PortScanner()
 
     elif tool == 2:
