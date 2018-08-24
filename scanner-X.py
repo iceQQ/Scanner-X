@@ -274,15 +274,26 @@ def deauth():
     pr = os.popen(com)
     command = "aireplay-ng --deauth  0 -a "+ mac + " " + interface 
     process = os.popen(command)
-
+def netscanterm():
+    print ga.yellow
+    os.system("clear")
+    os.system("figlet NetScan")
+    ip = raw_input("NetWork IP: ")
+    os.system("clear")
+    os.system("figlet Scanning")
+    command = "nmap -sL ", ip
+    process = os.popen(command)
+    info = str(process.read())
+    print info
 
 
 #################
 os.system("cls")
 os.system("clear")
 os.system("figlet Scanner-X")
-print "[1] For Linux-Termux"
-print "[2] For Windows"
+print "[1] For Kali-Parrot"
+print "[2] For Termux"
+print "[3] For Windows"
 print "\n"
 soft = input("Software: ")
 if soft == 1:
@@ -330,6 +341,46 @@ if soft == 1:
 	termux()
 
 elif soft == 2:
+        print ga.red
+    os.system("clear")
+    print banner()
+    os.system("figlet Scanner-X")
+    print ga.green
+    print "[1] WebSite Port Scanner   [5] DOS Tool" 
+    print "[2] Admin Panel Finder     [6] Find WebSite Info"
+    print "[3] IP-GeoLocate           [7] Update"
+    print "[4] Scan Network           [8] Exit"
+    print "\n" 
+
+    tool = input("----> ")
+
+    if tool == 0:
+	exit()
+    elif tool == 1:
+        PortScanner()
+
+    elif tool == 2:
+        findAdmin()
+    
+    elif tool == 3:
+	iplocate()
+
+    elif tool == 4:
+        netscanterm()
+
+    elif tool == 5:
+        DDoS()
+   
+    elif tool == 6:
+        webSiteInfo()
+
+    elif tool == 7:
+	termux()
+    elif tool == 8:
+        exit()
+
+        
+elif soft == 3:
     os.system("cls")
     os.system("color 4")
     print banner()
