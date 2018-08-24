@@ -7,6 +7,7 @@ update system,
 website info using whois
 added network scan--hosts,os detection,open ports
 added IPGeoLocator
+added Deauth Attack For Access Points
 
 Require python2 
 apt-get install python2
