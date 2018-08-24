@@ -283,7 +283,7 @@ def netscanterm():
     ip = raw_input("NetWork IP: ")
     os.system("clear")
     os.system("figlet Scanning")
-    command = "nmap -sL ", ip
+    command = "nmap -sL "+ ip
     process = os.popen(command)
     info = str(process.read())
     print info
