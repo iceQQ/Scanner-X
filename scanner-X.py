@@ -248,7 +248,7 @@ def networkScanner():
         print info
 
 def gmail():
-##Idia Of The Script From  Ha3MrX
+##Idea Of The Script From  Ha3MrX
    os.system("clear")
    os.system("figlet GmailCracker")
    print "\n"
