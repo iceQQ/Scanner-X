@@ -280,7 +280,7 @@ def gmail():
             print "Account hacked password is on gmail.txt"
             f = open("gmail.txt", "w")
             f.write("gmail: ")
-            f.write(gmail)
+            f.write(user_name)
             f.write("\n")
             f.write("password: ")
             f.write(password)
