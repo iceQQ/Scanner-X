@@ -1,14 +1,6 @@
 # Scanner-X
-its a multi-tool
-to find admin panel of a website,
-scan a website for open ports,
-make a dos attack to a website,
-update system,
-website info using whois
-added network scan--hosts,os detection,open ports
-added IPGeoLocator
-added Deauth Attack For Access Points
-
+MULTI TOOL IN PYTHON 
+====================
 Require python2 
 apt-get install python2
 # usage
