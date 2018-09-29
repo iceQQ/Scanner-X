@@ -13,9 +13,9 @@ ga = colors()
 def banner():
     print "#####################################"
     print "#    ++++++  Scanner-X v2  ++++++   #"
-    print "#        |==================|       #"
+    print "#    +   |==================|  +    #"
     print "#    +   |MACEDONIA IS GREEK|  +    #"
-    print "#        |==================|       #"
-    print "#    +    Scripts by icebot    +    #"
-    print "#   +++    WHITE-HAT-HACKER   +++   #"
+    print "#    +   |==================|  +    #"
+    print "#    +++++++++++++++++++++++++++    #"
+    print "#    +++   WHITE-HAT-HACKER  +++   #"
     print "#####################################"
