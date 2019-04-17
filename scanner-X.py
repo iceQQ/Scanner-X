@@ -136,19 +136,6 @@ def DDoS():
     ip = raw_input("Target IP : ")
     port = input("Target Port : ")
     os.system("clear")
-    for i in range(2):
-	    os.system("figlet Good Luck")
-	    time.sleep(1)
-	    os.system("clear")
-	    os.system("figlet Good Luck.")
-	    time.sleep(1)
-	    os.system("clear")
-	    os.system("figlet Good Luck..")
-	    time.sleep(1)
-	    os.system("clear")
-	    os.system("figlet Good Luck...")
-	    time.sleep(1)
-	    os.system("clear")
     sent = 0
     try:
         while True:
@@ -330,7 +317,24 @@ def netscanterm():
     info = str(process.read())
     print info
 
-
+def hex_ascii():
+    x = True
+    while x == True:
+        os.system("cls")
+        print "[1] Hex Encode"
+        print "[2] Hex Decode"
+        choise = input("--> ")
+        if choise == 1:
+            word=raw_input("Enter Text: ")
+            print word.encode("hex")
+        elif choise == 2:
+            word=raw_input("Enter Text: ")
+            print word.decode("hex")
+        rerun=raw_input("Reuse? [Y]yes [N]no: ")
+        if rerun == 'y' or rerun == 'Y':
+            continue
+        else:
+            x = False
 #################
 os.system("cls")
 os.system("clear")
@@ -350,7 +354,7 @@ if soft == 1:
     print "[2] Admin Panel Finder     [7] Find WebSite Info"
     print "[3] Gmail Cracker          [8] IP-GeoLocate"
     print "[4] DOS Tool               [9] Linux Update"
-    print "[5] Network-Scanner        [10] exit"
+    print "[5] Network-Scanner        [10] Hex_Encode-Decode"
     print "\n" 
 
     tool = input("----> ")
@@ -385,7 +389,7 @@ if soft == 1:
 	Update()
 
     elif tool == 10:
-        exit()
+        hex_ascii()
 
 elif soft == 2:
     print ga.red
@@ -396,7 +400,7 @@ elif soft == 2:
     print "[1] WebSite Port Scanner   [5] DOS Tool" 
     print "[2] Admin Panel Finder     [6] Find WebSite Info"
     print "[3] Gmail Cracker          [7] Scan NetWork"
-    print "[4] IP-GeoLocate           [8] Update"
+    print "[4] IP-GeoLocate           [8] hex_Encode-Decode"
     print "\n" 
 
     tool = input("----> ")
@@ -423,7 +427,7 @@ elif soft == 2:
 	netscanterm()
 	
     elif tool == 8:
-        termux()
+        hex_ascii()
 
         
 elif soft == 3:
@@ -436,6 +440,8 @@ elif soft == 3:
     print "[3]  DDoS Tool"
     print "[4]  Find Websites IP"
     print "[5]  Gmail Cracker"
+    print "[6]  IP-Geolocate"
+    print "[7]  Hex_Encode-Decode"
     print "\n" 
 
     tool = input("----> ")
@@ -455,4 +461,8 @@ elif soft == 3:
     elif tool == 5:
         gmail()
 
+    elif tool == 6:
+        iplocate()
 
+    elif tool == 7:
+        hex_ascii()
