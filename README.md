@@ -19,8 +19,4 @@ python2 scanner-x.py
 
 
 WINDOWS:
-first you are going to need python2.7
-download zip
-extract the zip file
-open command prompt and find the folder using cd
-then just type scanner-X.py
+just type scanner-x.py from cmd
